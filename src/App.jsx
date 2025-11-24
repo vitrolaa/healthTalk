@@ -16,12 +16,12 @@ function App() {
   const [isLoading, setIsLoading] = useState(false);
   const messagesEndRef = useRef(null);
 
-  // Initialize Gemini conversation on mount
+  
   useEffect(() => {
     initializeConversation();
   }, []);
 
-  // Auto-scroll to bottom of messages
+
   const scrollToBottom = () => {
     messagesEndRef.current?.scrollIntoView({ behavior: 'smooth' });
   };
@@ -30,7 +30,7 @@ function App() {
     scrollToBottom();
   }, [messages]);
 
-  // Check for existing session
+  
   useEffect(() => {
     const session = localStorage.getItem('healthtalk_session');
     if (session) {
@@ -39,13 +39,13 @@ function App() {
     }
   }, []);
 
-  // Handle login
+
   const handleLogin = (e) => {
     e.preventDefault();
     const email = e.target.email.value;
     const password = e.target.password.value;
 
-    // Simple validation (in production, this would be real authentication)
+
     if (email && password) {
       localStorage.setItem('healthtalk_session', JSON.stringify({ email }));
       setIsLoggedIn(true);
@@ -53,7 +53,7 @@ function App() {
     }
   };
 
-  // Handle logout
+  
   const handleLogout = () => {
     localStorage.removeItem('healthtalk_session');
     setIsLoggedIn(false);
@@ -67,7 +67,7 @@ function App() {
     ]);
   };
 
-  // Handle chat message submission
+  
   const handleChatSubmit = async (e) => {
     e.preventDefault();
 
@@ -76,18 +76,15 @@ function App() {
     const userMessage = inputMessage.trim();
     setInputMessage('');
 
-    // Add user message to chat
     setMessages(prev => [...prev, { role: 'user', text: userMessage }]);
     setIsLoading(true);
 
     try {
-      // Get AI response
       const aiResponse = await sendMessageToGemini(userMessage);
 
-      // Add AI response to chat
+  
       setMessages(prev => [...prev, { role: 'ai', text: aiResponse }]);
     } catch (error) {
-      // Add error message]
       setMessages(prev => [...prev, {
         role: 'ai',
         text: 'Desculpe, ocorreu um erro ao processar sua mensagem. Por favor, tente novamente.'
@@ -97,14 +94,12 @@ function App() {
     }
   };
 
-  // Handle exit from chat (save conversation and clear)
+
   const handleExitChat = () => {
-    // Only save if there are messages beyond the initial greeting
     if (messages.length > 1) {
       downloadConversationAsJSON(messages);
     }
 
-    // Clear the chat and reset to initial state
     setMessages([
       {
         role: 'ai',
@@ -112,14 +107,11 @@ function App() {
       }
     ]);
 
-    // Clear the Gemini conversation history
     clearConversation();
 
-    // Navigate back to menu
     navigateTo('menu');
   };
 
-  // Navigation functions
   const navigateTo = (page) => {
     setCurrentPage(page);
   };
