@@ -1,58 +1,16 @@
-# HealthTalk
+# React + Vite
 
-## Sobre o projeto
+This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
 
-HealthTalk é uma aplicação criada para auxiliar pessoas que enfrentam dificuldades relacionadas à saúde mental, oferecendo um espaço seguro para conversar com uma Inteligência Artificial que fornece apoio inicial, escuta ativa e orientações básicas.
+Currently, two official plugins are available:
 
-# Mídias
+- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
+- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
 
-<img src= "1.png">
-<img src= "2.png">
-<img src= "3.png">
-<img src= "4.png">
+## React Compiler
 
-Em um cenário onde a saúde mental é cada vez mais discutida, o HealthTalk surge como uma ferramenta acessível e intuitiva. O usuário realiza um cadastro simples informando:
+The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
 
-- Nome  
-- Data de nascimento  
-- E-mail  
-- Sintomas relatados  
+## Expanding the ESLint configuration
 
-Após o cadastro, ele tem acesso a um menu que oferece:
-
-- **Chat com a IA** – interação em tempo real para receber suporte  
-- **Tela sobre os criadores** – informações sobre a equipe responsável pelo projeto  
-
----
-
-## Tecnologias utilizadas
-
-### Back-end
-- Java  
-- MySQL  
-- Comunicação via API  
-
-### Funcionalidades principais
-- Cadastro de usuários  
-- Armazenamento de dados no MySQL  
-- Chat com IA integrada  
-- Telas organizadas e intuitivas por menu  
-
----
-
-## Objetivo do projeto
-
-O HealthTalk tem como objetivo unir tecnologia e cuidado emocional, oferecendo um primeiro ponto de apoio para pessoas que buscam orientação, conforto ou simplesmente alguém — ou algo — com quem conversar.
-
----
-
-## Autores
-
-**Heitor Nunes Lopes**, **Theo Viganó**, **Vitor Brito**
-
----
-
-## Mentor
-
-**Vinícius Hiller**
-
+If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
