@@ -4,6 +4,9 @@
 
 HealthTalk é uma aplicação criada para auxiliar pessoas que enfrentam dificuldades relacionadas à saúde mental, oferecendo um espaço seguro para conversar com uma Inteligência Artificial que fornece apoio inicial, escuta ativa e orientações básicas.
 
+# Visite nosaa aplicação
+[Health Check](https://health-talk-plum.vercel.app/)
+
 # Mídias
 
 <img src="./1.png">
