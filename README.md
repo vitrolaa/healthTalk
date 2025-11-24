@@ -51,7 +51,7 @@ O HealthTalk tem como objetivo unir tecnologia e cuidado emocional, oferecendo u
 
 ## Autores
 
-**Heitor Nunes Lopes**, **Theo Viganó**, **Vitor Brito**
+**Antônio de Lima Lesnik**, **Max Vinycius Fernandes**, **Heitor Nunes Lopes**, **Theo Viganó**, **Vitor Brito**
 
 ---
 
